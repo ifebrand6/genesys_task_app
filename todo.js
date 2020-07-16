@@ -3,7 +3,7 @@ let taskList = document.getElementById('task_list');
 form.addEventListener('submit', createTask);
 
 
-function newTask() {
+function newTaskField() {
     let newTaskInput = document.getElementById('taskInput').value;
     const task_card = document.createElement('li');
     const square_box = document.createElement('div');
@@ -41,7 +41,6 @@ function newTask() {
 }
 
 function editTaskField() {
-    let newTaskInput = document.getElementById('taskInput').value;
     const task_card = document.createElement('li');
     const task_text = document.createElement('div');
     const edit_input = document.createElement('input')
@@ -74,7 +73,7 @@ function createTask(event) {
     let newTaskInput = document.getElementById('taskInput').value;
     let taskList = document.getElementById('task_list')
     if (newTaskInput != '') {
-        taskList.appendChild(newTask());
+        taskList.appendChild(newTaskField());
         clearInputField();
         incrementNumberOfTask();
     } else {
@@ -97,7 +96,7 @@ function updateTask(event) {
 
     let currentTask = event.target.parentElement.parentElement.parentElement;
     let new_value = event.target.parentElement.parentElement.previousSibling.firstChild.value;
-    let updatedTask = newTask()
+    let updatedTask = newTaskField()
     updatedTask.children[1].textContent = new_value
     currentTask.parentElement.appendChild(updatedTask)
     currentTask.parentElement.removeChild(currentTask)
@@ -114,7 +113,9 @@ function deleteTask(event) {
     }
 
 }
-
+function markAsTaskAComplete(params) {
+    
+}
 function returnErrorForEmptyInput(params) {
     input_field = document.getElementById('taskInput')
     input_field.placeholder = "You must add a todo!";
