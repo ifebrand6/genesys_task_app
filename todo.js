@@ -71,8 +71,8 @@ function editTaskField() {
 
 function createTask(event) {
     event.preventDefault();
-    const newTaskInput = document.getElementById('taskInput').value;
-    const taskList = document.getElementById('task_list')
+    let newTaskInput = document.getElementById('taskInput').value;
+    let taskList = document.getElementById('task_list')
     if (newTaskInput != '') {
         taskList.appendChild(newTask());
         clearInputField();
