@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="UDEOGU IFECHUKWU">
-    <meta name="description" content="Todo List Genesys Admin">
+    <meta name="description" content="UDEOGU List Genesys Todo Create">
     <meta name="keywords" content="todo, genesys, JavaScript">
     <link rel="stylesheet" href="todo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,6 +49,20 @@
         </div>
     </footer>
 </body>
+<!-- https://raw.githubusercontent.com/ifebrand6/genesys_task_app/master/todo.js -->
+<!-- <script src="https://raw.githubusercontent.com/ifebrand6/genesys_task_app/master/todo.js"></script> -->
 <script src="todo.js"></script>
-
+<script>
+    async function createFile(){
+    let response = await fetch('https://raw.githubusercontent.com/ifebrand6/genesys_task_app/master/todo.js');
+    let data = await response.blob();
+    let metadata = {
+        type: 'js'
+    };
+    let file = new File([data], "test.js", metadata);
+    // ... do something with the file or return it
+    console.log(file)
+    }
+    createFile();
+</script>
 </html>

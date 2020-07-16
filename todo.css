@@ -189,3 +189,13 @@ ul {
         display: none;
     }
     }
+    .task-card-completed {
+        border: 1px solid;
+        padding: 0.5em;
+        display: flex;
+        align-items: center;
+        margin-block-end: 1vh;
+        text-decoration: line-through !important;
+        opacity: 40%;
+        text-decoration-color: #222222;
+    }

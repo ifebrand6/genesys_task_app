@@ -18,6 +18,8 @@ function newTaskField() {
     task_card.className = 'task-card main-bgcolor shadow-color shadow-border-color ';
     square_box.className = 'square_box';
     check_box.type = 'checkbox'
+    check_box.id = 'default'
+    check_box.addEventListener('change', toggleTask)
     task_text.className = 'task-text';
     task_text.id = 'task_info';
     task_text.textContent = newTaskInput;
@@ -113,9 +115,19 @@ function deleteTask(event) {
     }
 
 }
-function markAsTaskAComplete(params) {
-    
+
+function toggleTask(event) {
+    let eventIdentifeir = event.target.parentElement.parentElement.firstChild.children[0].id;
+    if (eventIdentifeir === 'default') {
+        event.target.parentElement.parentElement.className = "task-card-completed main-bgcolor shadow-color shadow-border-color";
+        document.getElementById('default').id = 'isSelected'
+    } else {
+        event.target.parentElement.parentElement.className = "task-card main-bgcolor shadow-color shadow-border-color";
+        document.getElementById('isSelected').id = 'default';
+    }
+
 }
+
 function returnErrorForEmptyInput(params) {
     input_field = document.getElementById('taskInput')
     input_field.placeholder = "You must add a todo!";

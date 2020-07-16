@@ -11,8 +11,9 @@ to remove task
     use the removeNode function to remove the parent 
  // try to use a confirmation
  to edit task
-    add an event that list to when a edit button is click
-    a fucntion that change the task-text field to an diff node
+    add an event that listen to when a edit button is click
+    a fucntion that change the  current node  to an diff node - an input
+    
     the node should contain a new div with input and mark button
     when the use clcik on mark
     it should remove the div and return the array
