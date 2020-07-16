@@ -1,0 +1,26 @@
+MY APPROACH 
+ to add task 
+    add an event listener that prevent the form from reloading when submit is click
+    add a function that create a new element - list. and equate the value to the value of the input 
+    the element should also include the buttons- edit % delete
+    append the result into the ul element to reflect changes
+to remove task 
+    add an event that listen to click on the button 
+    it should check contains a class name 'delete"
+    then select the parent node
+    use the removeNode function to remove the parent 
+ // try to use a confirmation
+ to edit task
+    add an event that list to when a edit button is click
+    a fucntion that change the task-text field to an diff node
+    the node should contain a new div with input and mark button
+    when the use clcik on mark
+    it should remove the div and return the array
+    
+    ....
+    a fucntion that replace the text content to the current input
+    it should render output with the current input text
+    a new event listen is call to equate the text with the current input
+    >>
+    
+    once enter is click or mouse is hover 

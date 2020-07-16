@@ -1,0 +1,180 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, 'Helvetica Neue', 'Open Sans', sans-serif;
+}
+
+.main-bgcolor {
+    background-color: #222222;
+}
+
+.main-font-color {
+    color: white;
+}
+
+.main-border-color {
+    color: white;
+}
+
+.shadow-color {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.shadow-border-color {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.todo-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 90vh;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    /* overflow-y: auto; */
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    opacity: 30%;
+}
+
+#top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s both;
+}
+
+#time-box {
+    font-size: small;
+    margin: .5rem;
+    text-align: center;
+    width: 100%;
+}
+
+#clock-box {
+    font-size: 3em;
+    width: 100%;
+    border: 1px solid;
+    padding: 0.5rem;
+}
+
+#day-box {
+    margin-top: 1rem;
+}
+
+#tasks-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: .5rem;
+    animation: fadeInUp 1s both;
+}
+
+.task-header {
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: .25rem;
+    font-size: 1.5em;
+}
+
+form {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-top: 3vh;
+}
+
+input[type="text"] {
+    padding: .5rem;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s, border 0.3s;
+    font-size: 1em;
+    width: 75%;
+}
+
+.add-task-button {
+    border: none;
+    box-shadow: none;
+    background: none;
+    font-size: 1em;
+}
+
+.tasks-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scrollable {
+    overflow: auto;
+    width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+ul {
+    margin: .5rem;
+}
+
+.shown-items {
+    text-align: left;
+    min-height: .5rem;
+}
+
+.task-card {
+    border: 1px solid;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    margin-block-end: 1vh;
+}
+
+.square_box {
+    position: relative;
+    margin-right: 1em;
+}
+
+.task-text {
+    color: whitesmoke;
+    flex-grow: 1;
+}
+
+#my-info {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+}
+
+.danger {
+    color: red;
+    opacity: 20%;
+    padding: .5rem;
+    border: solid 1px rgb(255, 18, 18) !important;
+    transition: box-shadow 0.3s, border 0.3s;
+    font-size: 1em;
+    width: 75%;
+    background-color: #222222;
+}
+
+.editing-task {
+    padding: .5rem;
+    border: solid 1px #0066ccdb !important;
+    transition: box-shadow 0.3s, border 0.3s !important;
+    font-size: 1em;
+    width: 90%;
+    color: #0505f7;
+    background-color: #222222;
+
+}
