@@ -1,7 +1,7 @@
+
 let form = document.getElementById('addTask');
 let taskList = document.getElementById('task_list');
 form.addEventListener('submit', createTask);
-
 
 function newTaskField() {
     let newTaskInput = document.getElementById('taskInput').value;
@@ -86,7 +86,6 @@ function createTask(event) {
 function editTask(event) {
     if (event.target.parentElement.id === 'edit') {
         const currentTask = event.target.parentElement.parentElement.parentElement;
-        const a = currentTask
         let currentText = currentTask.children[1].textContent;
         let editInput = editTaskField()
         editInput.children[0].firstChild.defaultValue = currentText
@@ -95,7 +94,6 @@ function editTask(event) {
 }
 
 function updateTask(event) {
-
     let currentTask = event.target.parentElement.parentElement.parentElement;
     let new_value = event.target.parentElement.parentElement.previousSibling.firstChild.value;
     let updatedTask = newTaskField()
@@ -142,19 +140,15 @@ function clearInputField() {
 }
 
 function incrementNumberOfTask() {
-
     let getNumberOfTasks = () => (document.getElementsByTagName('li').length);
     let number = document.getElementById('taskNumber');
     number.textContent = getNumberOfTasks()
-
 }
 
 function decrementNumberOfTask() {
-
     let getNumberOfTasks = () => (document.getElementsByTagName('li').length);
     let number = document.getElementById('taskNumber');
     number.textContent = getNumberOfTasks()
-
 }
 
 function tickClock() {
