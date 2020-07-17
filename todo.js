@@ -78,7 +78,7 @@ function createTask(event) {
     if (newTaskInput != '') {
         taskList.appendChild(newTaskField());
         clearInputField();
-        incrementNumberOfTask();
+        numberOfTaskUpdater();
     } else {
         returnErrorForEmptyInput()
     }
@@ -88,7 +88,6 @@ function editTask(event) {
     
     if (event.target.parentElement.id === 'edit') {
         const currentTask = event.target.parentElement.parentElement.parentElement;
-        console.log(currentTask)
         let currentText = currentTask.children[1].textContent;
         let editInput = editTaskField()
         editInput.children[0].firstChild.defaultValue = currentText
@@ -117,7 +116,7 @@ function deleteTask(event) {
         if (confirm('Are you sure of this delete?')) {
             const currentTask = event.target.parentElement.parentElement.parentElement;
             taskList.removeChild(currentTask);
-            decrementNumberOfTask()
+            numberOfTaskUpdater()
         }
     }
 
@@ -148,13 +147,7 @@ function clearInputField() {
     document.getElementById('taskInput').className = 'todo main-bgcolor main-font-color'
 }
 
-function incrementNumberOfTask() {
-    let getNumberOfTasks = () => (document.getElementsByTagName('li').length);
-    let number = document.getElementById('taskNumber');
-    number.textContent = getNumberOfTasks()
-}
-
-function decrementNumberOfTask() {
+function numberOfTaskUpdater() {
     let getNumberOfTasks = () => (document.getElementsByTagName('li').length);
     let number = document.getElementById('taskNumber');
     number.textContent = getNumberOfTasks()
