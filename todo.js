@@ -22,6 +22,7 @@ function newTaskField() {
     check_box.addEventListener('change', toggleTask)
     task_text.className = 'task-text';
     task_text.id = 'task_info';
+    task_text.addEventListener('dblclick', editTask)
     task_text.textContent = newTaskInput;
     container_div.style.float = 'right';
     edit_button.className = 'main-font-color';
@@ -84,11 +85,19 @@ function createTask(event) {
 }
 
 function editTask(event) {
+    
     if (event.target.parentElement.id === 'edit') {
         const currentTask = event.target.parentElement.parentElement.parentElement;
+        console.log(currentTask)
         let currentText = currentTask.children[1].textContent;
         let editInput = editTaskField()
         editInput.children[0].firstChild.defaultValue = currentText
+        currentTask.replaceWith(editInput)
+    } else if (event.target.id = 'text_info') {
+        const currentTask = event.target.parentElement;
+        let currentText = currentTask.children[1].textContent;
+        let editInput = editTaskField();
+        editInput.children[0].firstChild.defaultValue = currentText;
         currentTask.replaceWith(editInput)
     }
 }

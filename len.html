@@ -3,27 +3,15 @@
 
 <head>
     <title>Javascript External Script</title>
-    <script src = "len.js" type = "text/javascript" ></script>
-    <script>
-        function Hello() {
-            alert("works")
-        }
-    </script>
-    <noscript>
-        <style type="text/css">
-            .wrapper {display:none;}
-        </style>
-        <div>
-            <!-- <img src="src/to/your/image.png" alt="You don't have javascript enabled"> -->
-        </div>
-    </noscript>
 </head>
 
-<body>
-    <input type = "button" onclick = "Hello();" name = "ok" value = "Click Me" />
-    <p onmouseover = "Eventhandler()">
-        Hello i pop
-    </p>
+<body onload="loadLocal()">
+    <input type = "button" onclick ="addText()" name = "ok" value = "Click Me" />
+  
+    <div id="text">
+
+    </div>
+    <script src = "len.js" type = "text/javascript" ></script>
 </body>
 
 </html>

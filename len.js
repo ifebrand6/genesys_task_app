@@ -1,9 +1,12 @@
-const hello = () => {
-    console.log("this is c")
-    alert( "Hello world");
-    
+
+function generateValue() {
+    return ((Math.random(200) * 1000)).toPrecision(3)
 }
-function Eventhandler() {
-    alert("this is amazing")
+function addText(event) {
+    let state = document.getElementById('text')
+    let value = state.textContent = generateValue();
+    localStorage.state = value;
 }
-console.dir(document)
+function loadLocal(params) {
+    document.getElementById('text').textContent = localStorage.state
+}

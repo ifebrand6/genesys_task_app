@@ -12,12 +12,18 @@ to remove task
  // try to use a confirmation
  to edit task
     add an event that listen to when a edit button is click
-    a fucntion that change the  current node  to an diff node - an input
-    
-    the node should contain a new div with input and mark button
-    when the use clcik on mark
+    a fucntion that create a new node- with input and a button for update action - d button should have an onclik listener
+    set the new node input default value to the current node text content
+    a function that change the  current node( the list node)  to the new  node -
+
+.......... user fill the input
+   APPROACH 1
+    when the use clcik on update 
+      >>>  set a variable that select the parentNode of the list
+      >>> set a variable that collect the user input of the node content
+      >>  use replaceChildWith to replace the childnode with the currentNode
     it should remove the div and return the array
-    
+   APPROACH 2
     ....
     a fucntion that replace the text content to the current input
     it should render output with the current input text
@@ -36,6 +42,15 @@ function persistData(params) {
    console.log(persistenceData)
 }
 
+PERSISTENCE data
+declare a new array object
+set the object to empty
+set the localStorage to the array obj 
+/////
+the add function should push the new value into the array obj
+///
+the delete function
+it should take the current array id and pop it
 
 <!-- <script>
 // Check browser support
