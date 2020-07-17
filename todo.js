@@ -1,4 +1,5 @@
 
+//  AUTHOR: udeogu ifechukwu
 let form = document.getElementById('addTask');
 let taskList = document.getElementById('task_list');
 form.addEventListener('submit', createTask);
@@ -151,6 +152,9 @@ function numberOfTaskUpdater() {
     let getNumberOfTasks = () => (document.getElementsByTagName('li').length);
     let number = document.getElementById('taskNumber');
     number.textContent = getNumberOfTasks()
+   if(getNumberOfTasks() > 1){
+       document.getElementById('plural_identifier').textContent = 's'
+   }
 }
 
 function tickClock() {
